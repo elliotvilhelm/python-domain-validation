@@ -1,6 +1,6 @@
 import re
 from datetime import datetime
-from constants import MONTHS
+from whois_python.constants import MONTHS
 
 
 def parse_date(date):
