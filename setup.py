@@ -1,14 +1,21 @@
-from distutils.core import setup
+import setuptools
 
-setup(
-    name = 'whois-python',
-    packages = ['whois-python'],
-    version = '1.0',  # Ideally should be same as your GitHub release tag varsion
-    description = 'whois client and parser focused on creation date',
-    author = 'Elliot Pourmand',
-    author_email = 'elliot@pourmand.com',
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="whois-python",
+    version="1.0",
+    author="Elliot Pourmand",
+    author_email="elliot@pourmand.com",
+    description="whois client and parser focused on creation date",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url = 'https://github.com/ElliotVilhelm/python-whois',
-    download_url = 'https://github.com/ElliotVilhelm/python-whois/archive/v1.0.tar.gz',
-    keywords = ['whois', 'domain age'],
-    classifiers = [],
+    packages=setuptools.find_packages(),
+    classifiers=(
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ),
 )
