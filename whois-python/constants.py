@@ -152,3 +152,5 @@ SERVERS = {
     "yu": "whois.ripe.net",
     "life": "whois.nic.life"
     }
+SERVER_NOT_FOUND = "Server_not_found"
+CREATION_DATE_NOT_FOUND = "Creation_date_not_found"
