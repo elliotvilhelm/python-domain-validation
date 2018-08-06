@@ -545,6 +545,6 @@ for domain in test_domains:
     res = get_creation_date(domain)
     if res == 'Creation_date_not_found' or res == 'Server_not_found':
         failures.append(domain)
-    print("domain: " + domain + "result: " + res)
+    print("domain: " + domain + "  result: " + res.__str__())
 print("failures: ", failures)
 
