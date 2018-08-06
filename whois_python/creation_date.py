@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import re
-from constants import WHOIS_PORTION_SIZE, WHOIS_PORT, WHOIS_RESPONSE_LEN_LIMIT, SERVERS, SERVER_NOT_FOUND, CREATION_DATE_NOT_FOUND, MONTHS
-from whois_client import query_whois
-from parse_date import parse_date
+from whois_python.constants import SERVER_NOT_FOUND, CREATION_DATE_NOT_FOUND
+from whois_python.whois_client import query_whois
+from whois_python.parse_date import parse_date
 
 
 def get_creation_date(domain):
