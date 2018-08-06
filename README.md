@@ -1,3 +1,3 @@
 ### Whois Client and Parser
-This is a simple client that is only focused on parsing creation date. The motivation for writing this was that many of the whois clients available were spawning child processes and calling the debian
+This is a simple client that is only focused on parsing creation date. The motivation for writing this was that many of the whois clients available were spawning child processes calling the debian
 whois package. This is a security vulnerability when working at an enterprise level, e.g. testing a domain such as `rm -rf /*`. It is much safer to directly connect through a socket.
