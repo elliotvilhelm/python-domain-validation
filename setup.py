@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="whois-python",
-    version="1.0",
+    name="whois_python",
+    version="1.2",
     author="Elliot Pourmand",
     author_email="elliot@pourmand.com",
     description="whois client and parser focused on creation date",
