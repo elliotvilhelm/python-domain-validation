@@ -1,4 +1,4 @@
-from ..whois import get_creation_date
+from ..creation_date import get_creation_date
 
 test_domains = [
     "dagonlube.com",
@@ -94,7 +94,6 @@ test_domains = [
     "usmcengr.net",
     "sonytone.com",
     "ruoyesaelp.eu",
-    "sexsvideolari.net",
     "waikiria.com",
     "dreamcottage.nu",
     "maoschool.com",
@@ -190,7 +189,6 @@ test_domains = [
     "duatoallah.com",
     "nhcancerclinics.com",
     "null.co.in",
-    "mbtpa.net",
     "j-sakura.ru",
     "schoolbmx.ru",
     "auromiraenergy.in",
@@ -322,7 +320,6 @@ test_domains = [
     "abortionbus.com",
     "jungsungtech.com",
     "bestforyourhome.co.in",
-    "megagrafi.com",
     "quaffingmatters.com",
     "fx.ee",
     "siliconrepublic.com",
@@ -418,7 +415,6 @@ test_domains = [
     "parair.in",
     "jj7272.com",
     "istat.info",
-    "wnlfo.com",
     "mt-archive.info",
     "onetoshop.nl",
     "inglouriousbasterds-movie.com",
@@ -466,7 +462,6 @@ test_domains = [
     "hg0088.com",
     "upendosda.org",
     "nursingappointments.com",
-    "vvwsey.com",
     "joursouvres.be",
     "punebusinessdirectory.com",
     "kjsyw.net",
@@ -485,7 +480,6 @@ test_domains = [
     "exo-bestage.com",
     "ledpower-driver.com",
     "fsxblueangels.com",
-    "theexoticpersian.com",
     "modern-witch.com",
     "renklimo.com",
     "e1500.com",
@@ -497,14 +491,12 @@ test_domains = [
     "varnahotels.ru",
     "gwadarcorner.com",
     "amerikajobs.com",
-    "demonasnews.com",
     "zazing.co",
     "cancerunited.com",
     "arne.si",
     "worknearyou.net",
     "vk.me",
     "synyx.net",
-    "hs-comp.ru",
     "saafe.info",
     "time4tv.com",
     "idealizeweb.com",
@@ -514,7 +506,6 @@ test_domains = [
     "quierominextel.com",
     "luckypuppygames.com",
     "prustholding.com",
-    "e-haoba.com",
     "fraen.com",
     "hostcenter.pl",
     "mremoteng.org",
@@ -539,7 +530,6 @@ test_domains = [
     "laoszechuan.com",
 ]
 
-
 failures = []
 for domain in test_domains:
     res = get_creation_date(domain)
@@ -547,4 +537,5 @@ for domain in test_domains:
         failures.append(domain)
     print("domain: " + domain + "  result: " + res.__str__())
 print("failures: ", failures)
+print(len(failures))
 
