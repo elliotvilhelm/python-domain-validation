@@ -1,5 +1,3 @@
-import socket
-
 WHOIS_PORT = 43
 WHOIS_RESPONSE_LEN_LIMIT = 10000
 WHOIS_PORTION_SIZE = 100
@@ -151,83 +149,6 @@ SERVERS = {
     "vg": "whois.adamsnames.tc",
     "ws": "www.nic.ws",
     "xxx": "whois.nic.xxx",
-    "yu": "whois.ripe.net"}
-
-
-def query_whois(domain):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server = fetch_server(domain)
-    sock.connect((server, WHOIS_PORT))
-    sock.send(domain + "\r\n")
-    whois_response = ''
-    while len(whois_response) < WHOIS_RESPONSE_LEN_LIMIT:
-        response_portion = sock.recv(WHOIS_PORTION_SIZE)
-        if response_portion == '':
-            break
-        whois_response += response_portion
-    sock.close()
-    return whois_response
-
-
-def fetch_server(domain):
-    return SERVERS[domain.split(".")[-1]]
-
-
-def test_whois_com():
-    print(query_whois("google.com"))
-
-
-def test_whois_org():
-    print(query_whois("npr.org"))
-
-
-def test_whois_de():
-    print(query_whois("hello.de"))
-
-
-def test_whois_net():
-    print(query_whois("hey.net"))
-
-
-def test_whois_mx():
-    print(query_whois("hey.mx"))
-
-
-def test_whois_ru():
-    print(query_whois("hey.ru"))
-
-
-def test_whois_br():
-    print(query_whois("hey.br"))
-
-
-def test_whois_it():
-    print(query_whois("hey.it"))
-
-
-def test_whois_us():
-    print(query_whois("hey.us"))
-
-
-def test_whois_la():
-    print(query_whois("hey.la"))
-
-
-def test_whois_gq():
-    print(query_whois("hey.gq"))
-
-
-def test_whois_gt():
-    print(query_whois("hey.gt"))
-
-# test_whois_org()  # P
-# test_whois_de()   # F
-# test_whois_net()  # P
-# test_whois_mx()   # P
-# test_whois_ru()   # P
-# test_whois_br()   # F
-# test_whois_it()   # P
-# test_whois_us()   # P
-# test_whois_la()   # P
-# test_whois_gq()   # F
-# test_whois_gt()   # P
+    "yu": "whois.ripe.net",
+    "life": "whois.nic.life"
+    }
