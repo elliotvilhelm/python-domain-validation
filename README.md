@@ -1,6 +1,6 @@
 ### Whois Client and Parser Specialized for Domain Creation Date
 This is a simple Whois domain registry client that is only focused on parsing domain creation date. 
-The age of a domain can have many applications in __abuse prevention and fraud detection__.
+The age of a domain can have many applications in __abuse prevention__ and __fraud detection__.
 Often spammers / hackers will register on sites using newly created domains. Being able to quickly identify the age of 
 a domain has numerous applications in fighting fraudulent activity.
 
