@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*- 
 import socket
-from whois_python.constants import WHOIS_PORTION_SIZE, WHOIS_PORT, WHOIS_RESPONSE_LEN_LIMIT, SERVERS, SERVER_NOT_FOUND, CREATION_DATE_NOT_FOUND
+from whois_python.constants import WHOIS_PORTION_SIZE, WHOIS_PORT, WHOIS_RESPONSE_LEN_LIMIT, SERVERS, SERVER_NOT_FOUND
 
 
 def query_whois(domain):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server = fetch_server(domain)
-    if not server:
-        return SERVER_NOT_FOUND
     try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server = fetch_server(domain)
+        if not server:
+            return SERVER_NOT_FOUND
         sock.connect((server, WHOIS_PORT))
         sock.send((domain + "\r\n").encode('utf-8'))
         whois_response = ''
         while len(whois_response) < WHOIS_RESPONSE_LEN_LIMIT:
-            response_portion = sock.recv(WHOIS_PORTION_SIZE)
+            response_portion = sock.recv(WHOIS_PORTION_SIZE).decode('utf-8')
             if response_portion == '':
                 break
             whois_response += response_portion
