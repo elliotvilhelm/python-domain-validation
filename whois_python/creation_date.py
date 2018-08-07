@@ -5,7 +5,7 @@ from whois_python.whois_client import query_whois
 from whois_python.parse_date import parse_date
 
 
-def get_creation_date(domain):
+def get_domain_creation_date(domain):
     try:
         whois_response = query_whois(domain)
         if whois_response == SERVER_NOT_FOUND:
@@ -24,3 +24,4 @@ def get_creation_date(domain):
         return parse_date(date)
     except:
         return CREATION_DATE_NOT_FOUND
+

@@ -1,4 +1,4 @@
-from ..creation_date import get_creation_date
+from ..creation_date import get_domain_creation_date
 
 test_domains = [
     "dagonlube.com",
@@ -532,7 +532,7 @@ test_domains = [
 
 failures = []
 for domain in test_domains:
-    res = get_creation_date(domain)
+    res = get_domain_creation_date(domain)
     if res == 'Creation_date_not_found' or res == 'Server_not_found':
         failures.append(domain)
     print("domain: " + domain + "  result: " + res.__str__())

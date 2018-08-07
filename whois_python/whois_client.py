@@ -29,3 +29,4 @@ def fetch_server(domain):
         return SERVERS[domain_extension]
     else:
         return None
+
