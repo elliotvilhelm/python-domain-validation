@@ -29,6 +29,8 @@ This is a major improvement of runtime in relation to other WHOIS packages.
 ###### Python 3.x
 `pip3 install --index-url https://test.pypi.org/simple/ whois_python`
 
+![pypi](assets/pypi.svg)
+
 #### Usage
 The expected use case is for finding the creation date of a domain:
 ```
