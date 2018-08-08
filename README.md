@@ -1,9 +1,13 @@
-### WHOIS Client and Domain Creation Date Parser
+![spam](assets/hacker.png)
+
+## WHOIS Client and Domain Creation Date Parser
 This is a simple `WHOIS` domain registry client focused around parsing domain creation date. 
 The age of a domain has many applications in __abuse prevention__ and __fraud detection__.
 Spammers often register on sites using newly created domains. Being able to quickly identify the age of a domain has 
 numerous applications in fighting fraudulent activity.
-![spam](assets/hacker.png)
+
+This package maintains a list of domain extension to `WHOIS` server mappings. Using these servers and a 
+rule based parsing schema this package will provide you with the domain creation date of nearly any website.
 
 #### Background
 The motivation behind this package was that many of the `WHOIS` clients available spawning child processes calling 
