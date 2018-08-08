@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*- 
 import socket
-from whois_python.constants import WHOIS_PORTION_SIZE, WHOIS_PORT, WHOIS_RESPONSE_LEN_LIMIT, SERVERS, SERVER_NOT_FOUND
+from domain_age.constants import WHOIS_PORTION_SIZE, WHOIS_PORT, WHOIS_RESPONSE_LEN_LIMIT, SERVERS, SERVER_NOT_FOUND
 
 
 def query_whois(domain):

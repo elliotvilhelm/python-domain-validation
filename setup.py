@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="whois_python",
-    version="1.5.2",
+    name="domain_age",
+    version="1.5.4",
     author="Elliot Pourmand",
     author_email="elliot@pourmand.com",
-    description="whois client and parser focused on creation date",
+    description="whois client for parsing domain creation date",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url = 'https://github.com/ElliotVilhelm/python-whois',
+    url = 'https://github.com/ElliotVilhelm/python-domain-age',
     packages=setuptools.find_packages(),
     classifiers=(
         "Programming Language :: Python :: 3",
