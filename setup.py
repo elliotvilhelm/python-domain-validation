@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="domain_age",
-    version="1.5.4",
+    version="1.5.5",
     author="Elliot Pourmand",
     author_email="elliot@pourmand.com",
     description="whois client for parsing domain creation date",
