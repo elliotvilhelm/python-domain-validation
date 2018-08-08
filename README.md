@@ -33,14 +33,14 @@ This is a major improvement of runtime in relation to other WHOIS packages.
 
 #### Usage
 The expected use case is for finding the creation date of a domain:
-```
+```python
 from whois_python.creation_date import get_creation_date
 get_creation_date("google.com")
 ```
 Output: `datetime.date(1997, 9, 15)`
 
 This package is also able to provide raw `WHOIS` query results, although this is not the expected use-case:
-```
+```python
 from whois_python.WHOIS_client import query_whois
 query_whois("google.com")
 ```
