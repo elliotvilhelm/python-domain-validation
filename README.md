@@ -3,7 +3,7 @@ This is a simple `WHOIS` domain registry client focused around parsing domain cr
 The age of a domain has many applications in __abuse prevention__ and __fraud detection__.
 Spammers often register on sites using newly created domains. Being able to quickly identify the age of a domain has 
 numerous applications in fighting fraudulent activity.
-![spam](assets/spam.jpg)
+![spam](assets/hacker.png)
 
 #### Background
 The motivation behind this package was that many of the `WHOIS` clients available spawning child processes calling 
