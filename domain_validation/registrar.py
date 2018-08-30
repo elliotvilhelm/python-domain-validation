@@ -1,5 +1,5 @@
 import re
-from domain_age.constants import SERVER_NOT_FOUND, REGISTRAR_NOT_FOUND
+from domain_validation.constants import SERVER_NOT_FOUND, REGISTRAR_NOT_FOUND
 
 
 def get_registrar(whois_record):

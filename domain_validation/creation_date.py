@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
-from domain_age.constants import SERVER_NOT_FOUND, CREATION_DATE_NOT_FOUND
-from domain_age.parse_date import parse_date
+from domain_validation.constants import SERVER_NOT_FOUND, CREATION_DATE_NOT_FOUND
+from domain_validation.parse_date import parse_date
 
 
 def get_domain_creation_date(whois_record):

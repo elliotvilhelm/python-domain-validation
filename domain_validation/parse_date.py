@@ -1,6 +1,6 @@
 import re
 from datetime import datetime
-from domain_age.constants import MONTHS
+from domain_validation.constants import MONTHS
 
 
 def parse_date(date):

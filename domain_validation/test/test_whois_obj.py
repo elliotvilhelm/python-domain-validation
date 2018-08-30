@@ -1,4 +1,4 @@
-from domain_age.whois import WHOIS
+from domain_validation.whois import WHOIS
 from time import sleep
 
 

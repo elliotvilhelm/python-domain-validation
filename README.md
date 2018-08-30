@@ -25,23 +25,23 @@ This is a major improvement of runtime in relation to other WHOIS packages.
 
 #### Installation
 ###### Python 2.x
-`pip install --index-url https://test.pypi.org/simple/ domain_age`
+`pip install --index-url https://test.pypi.org/simple/ domain_validation`
 ###### Python 3.x
-`pip3 install --index-url https://test.pypi.org/simple/ domain_age`
+`pip3 install --index-url https://test.pypi.org/simple/ domain_validation`
 
 ![pypi](assets/pypi.svg)
 
 #### Usage
 The expected use case is for finding the creation date of a domain:
 ```python
-from domain_age.creation_date import get_domain_creation_date
+from domain_validation.creation_date import get_domain_creation_date
 get_domain_creation_date("google.com")
 ```
 Output: `datetime.date(1997, 9, 15)`
 
 This package is also able to provide raw `WHOIS` query results, although this is not the expected use-case:
 ```python
-from domain_age.whois_client import query_whois
+from domain_validation.whois_client import query_whois
 query_whois("google.com")
 ```
 

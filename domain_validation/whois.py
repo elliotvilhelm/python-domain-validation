@@ -1,6 +1,6 @@
-from domain_age.whois_client import query_whois
-from domain_age.creation_date import get_domain_creation_date
-from domain_age.registrar import get_registrar
+from domain_validation.whois_client import query_whois
+from domain_validation.creation_date import get_domain_creation_date
+from domain_validation.registrar import get_registrar
 
 
 class WHOIS:
