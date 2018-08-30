@@ -1,0 +1,2 @@
+name = "whois-python"
+
