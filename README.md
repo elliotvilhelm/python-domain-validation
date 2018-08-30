@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ElliotVilhelm/python-domain-validation.svg?branch=master)](https://travis-ci.org/ElliotVilhelm/python-domain-validation)
 ## WHOIS Client and Domain Creation Date Parser
 ![spam](assets/hacker.png)
 
