@@ -1,10 +1,11 @@
 ## WHOIS Client and Domain Creation Date Parser
 ![spam](assets/hacker.png)
 
-This is a simple `WHOIS` domain registry client focused around parsing domain creation date. 
+This is a simple `WHOIS` domain registry client focused around parsing `domain creation date` and `Registrar`.
 The age of a domain has many applications in __abuse prevention__ and __fraud detection__.
 Spammers often register on sites using newly created domains. Being able to quickly identify the age of a domain has 
-numerous applications in fighting fraudulent activity.
+numerous applications in fighting fraudulent activity. Similarly, the Registrar name of a domain can be very useful in fighting fraud by
+allowing an organization to implement blacklisting functionality of known fraudulent `Registrars`.
 
 This package maintains a list of domain extension to `WHOIS` server mappings. Using these servers and a 
 rule based parsing schema this package will provide you with the domain creation date of nearly any website.
@@ -34,15 +35,16 @@ This is a major improvement of runtime in relation to other WHOIS packages.
 #### Usage
 The expected use case is for finding the creation date of a domain:
 ```python
-from domain_validation.creation_date import get_domain_creation_date
-get_domain_creation_date("google.com")
-```
-Output: `datetime.date(1997, 9, 15)`
+from domain_validation.whois import WHOIS
 
-This package is also able to provide raw `WHOIS` query results, although this is not the expected use-case:
-```python
-from domain_validation.whois_client import query_whois
-query_whois("google.com")
+whois = WHOIS("google.com")
+assert str(whois.creation_date()) == "1997-09-15"
+assert whois.registrar() == "MarkMonitor Inc."
+
+whois = WHOIS("aa.中国")
+assert str(whois.creation_date()) == '2013-12-29'
+assert whois.registrar() == '张洪泉'
+
 ```
 
 #### Notes
@@ -56,3 +58,5 @@ Rather it uses a direct socket connection to the exact WHOIS server for the give
 Perhaps you are a small business or an enterprise organization facing fraudulent activity through spammy account sign-ups.
 One signal representing the validity of an email domain is the age of the domain. This package will allow you to query for the
 age of nearly any domain from and domain extension, securely and rapidly within the safety of a Python environment (no child proccess).
+Furthermore, if you are using a rule based fraud system, this package provides you with `Registrar` information allowing you to maintain a
+blacklist of Registrars which you have found to be fraudulent.
