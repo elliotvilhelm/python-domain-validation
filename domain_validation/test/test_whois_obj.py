@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 from domain_validation.whois import WHOIS
 from time import sleep
-
 
 
 def test_WHOIS_com():

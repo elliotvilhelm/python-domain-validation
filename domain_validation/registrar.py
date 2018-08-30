@@ -17,7 +17,8 @@ def get_registrar(whois_record):
         res = re.search(pattern, registrar)
         if not res:
             return REGISTRAR_NOT_FOUND
-        registrar = res[0].strip()
+        registrar = res.group(0).strip()
         return registrar
-    except:
+    except Exception as e:
+        print(e)
         return REGISTRAR_NOT_FOUND

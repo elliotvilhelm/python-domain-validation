@@ -20,6 +20,7 @@ def get_domain_creation_date(whois_record):
         start_index = date.start()
         date = creation_date[start_index:]
         return parse_date(date)
-    except:
+    except Exception as e:
+        print(e)
         return CREATION_DATE_NOT_FOUND
 

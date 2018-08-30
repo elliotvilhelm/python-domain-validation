@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 WHOIS_PORT = 43
 WHOIS_RESPONSE_LEN_LIMIT = 10000
 WHOIS_PORTION_SIZE = 64
