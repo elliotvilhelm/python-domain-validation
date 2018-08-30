@@ -6,7 +6,7 @@ def get_registrar(whois_record):
     try:
         if whois_record == SERVER_NOT_FOUND:
             return REGISTRAR_NOT_FOUND
-        pattern = r"Registrar:"
+        pattern = r"Registrar:|Registrant:"
         res = re.search(pattern, whois_record)
         if not res:
             return REGISTRAR_NOT_FOUND
@@ -14,7 +14,6 @@ def get_registrar(whois_record):
         registrar = whois_record[res.end():]
         if registrar[1] == '\r' or registrar[1] == '\n':
             registrar = registrar[2:]
-        # pdb.set_trace()
         res = re.search(pattern, registrar)
         if not res:
             return REGISTRAR_NOT_FOUND

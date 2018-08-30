@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from domain_validation.whois import WHOIS
 from time import sleep
 
@@ -34,4 +35,9 @@ def test_WHOIS_com_silo():
     assert str(whois.creation_date()) == "2018-07-30"
     assert whois.registrar() == "NameSilo, LLC"
 
+def test_WHOIS_cn():
+    sleep(.1)
+    whois = WHOIS("aa.中国")
+    assert str(whois.creation_date()) == '2013-12-29'
+    assert whois.registrar() == '张洪泉'
 

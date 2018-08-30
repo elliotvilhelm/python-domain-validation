@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 WHOIS_PORT = 43
 WHOIS_RESPONSE_LEN_LIMIT = 10000
-WHOIS_PORTION_SIZE = 100
+WHOIS_PORTION_SIZE = 64
 SERVERS = {
     "ac": "whois.nic.ac",
     "ae": "whois.aeda.net.ae",
@@ -150,7 +151,8 @@ SERVERS = {
     "ws": "whois.website.ws",
     "xxx": "whois.nic.xxx",
     "yu": "whois.ripe.net",
-    "life": "whois.nic.life"
+    "life": "whois.nic.life",
+    "中国": "cwhois.cnnic.cn"
 }
 SERVER_NOT_FOUND = "Server_not_found"
 CREATION_DATE_NOT_FOUND = "Creation_date_not_found"

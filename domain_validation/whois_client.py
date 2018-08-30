@@ -18,7 +18,8 @@ def query_whois(domain):
                 break
             whois_response += response_portion
         sock.close()
-    except:
+    except Exception as e:
+        print(e)
         return SERVER_NOT_FOUND
     return whois_response
 
