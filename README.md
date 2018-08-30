@@ -25,9 +25,9 @@ This is a major improvement of runtime in relation to other WHOIS packages.
 
 #### Installation
 ###### Python 2.x
-`pip install --index-url https://test.pypi.org/simple/ whois_python`
+`pip install --index-url https://test.pypi.org/simple/ domain_age`
 ###### Python 3.x
-`pip3 install --index-url https://test.pypi.org/simple/ whois_python`
+`pip3 install --index-url https://test.pypi.org/simple/ domain_age`
 
 ![pypi](assets/pypi.svg)
 
