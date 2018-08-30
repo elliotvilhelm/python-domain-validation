@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="domain_age",
-    version="1.5.5",
+    name="domain_validation",
+    version="1.5.6",
     author="Elliot Pourmand",
     author_email="elliot@pourmand.com",
-    description="whois client for parsing domain creation date",
+    description="whois client for parsing domain creation date and registrar",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url = 'https://github.com/ElliotVilhelm/python-domain-age',
+    url = 'https://github.com/ElliotVilhelm/python-domain-validation',
     packages=setuptools.find_packages(),
     classifiers=(
         "Programming Language :: Python :: 3",
