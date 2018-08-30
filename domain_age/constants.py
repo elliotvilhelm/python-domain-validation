@@ -154,5 +154,6 @@ SERVERS = {
 }
 SERVER_NOT_FOUND = "Server_not_found"
 CREATION_DATE_NOT_FOUND = "Creation_date_not_found"
+REGISTRAR_NOT_FOUND = "Registrar_not_found"
 MONTHS = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6, "Jul": 7,
           "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}

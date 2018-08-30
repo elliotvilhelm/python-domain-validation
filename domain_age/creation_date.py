@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
 from domain_age.constants import SERVER_NOT_FOUND, CREATION_DATE_NOT_FOUND
-from domain_age.whois_client import query_whois
 from domain_age.parse_date import parse_date
 
 
