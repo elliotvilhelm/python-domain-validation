@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="domain_validation",
-    version="1.6.1",
+    version="1.6.2",
     author="Elliot Pourmand",
     author_email="elliot@pourmand.com",
     description="whois client for parsing domain creation date and registrar",
