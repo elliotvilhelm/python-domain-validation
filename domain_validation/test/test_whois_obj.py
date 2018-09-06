@@ -37,6 +37,6 @@ def test_WHOIS_com_silo():
 
 def test_WHOIS_cn():
     sleep(.1)
-    whois = WHOIS("aa.中国")
-    assert str(whois.creation_date()) == '2013-12-29'
-    assert whois.registrar() == '张洪泉'
+    whois = WHOIS("yo.cn")
+    assert str(whois.creation_date()) == '2003-03-17'
+    assert whois.registrar() == '浙江贰贰网络有限公司'

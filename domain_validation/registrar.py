@@ -6,7 +6,7 @@ def get_registrar(whois_record):
     try:
         if whois_record == SERVER_NOT_FOUND:
             return REGISTRAR_NOT_FOUND
-        pattern = r"Registrar:|Registrar Name:"
+        pattern = r"Registrar:|Registrar Name:|Sponsoring Registrar:"
         res = re.search(pattern, whois_record)
         if not res:
             return REGISTRAR_NOT_FOUND
