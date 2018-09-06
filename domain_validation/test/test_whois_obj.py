@@ -41,3 +41,7 @@ def test_WHOIS_cn():
     assert str(whois.creation_date()) == '2013-12-29'
     assert whois.registrar() == '张洪泉'
 
+
+whois = WHOIS("traveldogsaustralia.com.au")
+print(whois.creation_date())
+print(whois.registrar())
