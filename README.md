@@ -42,10 +42,10 @@ whois = WHOIS("google.com")
 assert str(whois.creation_date()) == "1997-09-15"
 assert whois.registrar() == "MarkMonitor Inc."
 
-whois = WHOIS("aa.中国")
-assert str(whois.creation_date()) == '2013-12-29'
-assert whois.registrar() == '张洪泉'
-
+sleep(.1)
+whois = WHOIS("yo.cn")
+assert str(whois.creation_date()) == '2003-03-17'
+assert whois.registrar() == '浙江贰贰网络有限公司'
 ```
 
 #### Notes
