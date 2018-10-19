@@ -27,9 +27,9 @@ This is a major improvement of runtime in relation to other WHOIS packages.
 
 #### Installation
 ###### Python 2.x
-`pip install --index-url https://test.pypi.org/simple/ domain_validation`
+`pip install domain_validation`
 ###### Python 3.x
-`pip3 install --index-url https://test.pypi.org/simple/ domain_validation`
+`pip3 install domain_validation`
 
 ![pypi](assets/pypi.svg)
 
@@ -42,7 +42,6 @@ whois = WHOIS("google.com")
 assert str(whois.creation_date()) == "1997-09-15"
 assert whois.registrar() == "MarkMonitor Inc."
 
-sleep(.1)
 whois = WHOIS("yo.cn")
 assert str(whois.creation_date()) == '2003-03-17'
 assert whois.registrar() == '浙江贰贰网络有限公司'
