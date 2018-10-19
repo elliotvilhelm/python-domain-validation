@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
+
 import socket
 from domain_validation.constants import WHOIS_PORTION_SIZE, WHOIS_PORT, WHOIS_RESPONSE_LEN_LIMIT, SERVERS, SERVER_NOT_FOUND
 
@@ -13,7 +14,10 @@ def query_whois(domain):
         sock.send((domain + "\r\n").encode('utf-8'))
         whois_response = ''
         while len(whois_response) < WHOIS_RESPONSE_LEN_LIMIT:
-            response_portion = sock.recv(WHOIS_PORTION_SIZE).decode('utf-8')
+            try:
+                response_portion = sock.recv(WHOIS_PORTION_SIZE).decode('utf-8')
+            except Exception as e:
+                response_portion = sock.recv(WHOIS_PORTION_SIZE).decode('utf-16')
             if response_portion == '':
                 break
             whois_response += response_portion

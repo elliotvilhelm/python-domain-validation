@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from domain_validation.whois_client import query_whois
 from domain_validation.creation_date import get_domain_creation_date
 from domain_validation.registrar import get_registrar

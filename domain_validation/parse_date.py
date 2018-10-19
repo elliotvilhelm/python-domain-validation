@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import re
 from datetime import datetime
 from domain_validation.constants import MONTHS

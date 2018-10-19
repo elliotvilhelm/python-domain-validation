@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import re
 from domain_validation.constants import SERVER_NOT_FOUND, REGISTRAR_NOT_FOUND
 

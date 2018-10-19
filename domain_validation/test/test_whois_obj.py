@@ -17,11 +17,13 @@ def test_WHOIS_com2():
     assert str(whois.creation_date()) == "1995-01-18"
     assert whois.registrar() == "MarkMonitor Inc."
 
+
 def test_WHOIS_org():
     sleep(.1)
     whois = WHOIS("npr.org")
     assert str(whois.creation_date()) == "1993-12-13"
     assert whois.registrar() == "Network Solutions, LLC"
+
 
 def test_WHOIS_uk():
     sleep(.1)
@@ -29,14 +31,24 @@ def test_WHOIS_uk():
     assert str(whois.creation_date()) == "2014-06-11"
     assert whois.registrar() == "Planet Hippo Internet Ltd t/a EUKHOST [Tag = PLANETHIPPO]"
 
+
 def test_WHOIS_com_silo():
     sleep(.1)
     whois = WHOIS("1shivom.com")
     assert str(whois.creation_date()) == "2018-07-30"
     assert whois.registrar() == "NameSilo, LLC"
 
+
 def test_WHOIS_cn():
     sleep(.1)
     whois = WHOIS("yo.cn")
     assert str(whois.creation_date()) == '2003-03-17'
     assert whois.registrar() == '浙江贰贰网络有限公司'
+
+
+def test_WHOIS_utf_encoding():
+    sleep(.1)
+    whois = WHOIS("我爱你.中国")
+    assert str(whois.creation_date()) == '2004-01-06'
+    assert whois.registrar() == '北京新网互联科技有限公司'
+
